@@ -1,0 +1,107 @@
+.menu {
+   height: 80px;
+   position: relative;
+   padding: 30px 10% 5px 5%;
+}
+
+.linkMenu {
+   position: absolute;
+   right: 20%;
+}
+
+.linkMenu1 {
+   width: 20%;
+   height: fit-content;
+   font-weight: 700;
+   color: white;
+   background-color: rgba(5, 5, 5, 0.8);
+   border-top: 3px solid rgb(78, 131, 222);
+   padding: 0;
+   transition: 800ms;
+   margin: 100px 10%;
+}
+
+.link {
+   font-weight: 700;
+   color: white;
+   margin: 0 10px;
+}
+
+.link1 {
+   font-weight: 700;
+   color: white;
+}
+
+.link1:hover {
+   font-weight: 700;
+   color: rgba(246, 248, 250, 0.8);
+   background-color: rgba(5, 5, 5, 0);
+}
+
+.link2 {
+   font-weight: 790;
+   color: white;
+   background-color: rgba(5, 5, 5, 0.9);
+   border-top: 3px solid rgb(78, 131, 222);
+   width: 350px;
+   line-height: 30px;
+   padding: 15px;
+   margin: 0px;
+}
+
+.menuBody {
+   padding-right: 20%;
+   color: white;
+  
+}
+
+.iconSocial {
+  position: absolute;
+  top: -5px;
+  right: -25%;
+}
+
+.iconSearch {
+   border-color: rgba(5, 5, 5, 0);
+   font-size: 20px;
+   position: absolute;
+   right: 8%;
+ }
+
+ .closeSearchBut {
+   color: white;
+   background-color:  rgba(5, 5, 5, 0);
+   border-color: rgba(5, 5, 5, 0);
+   transition: 800ms;
+ }
+
+ .closeSearchBut:hover,
+ .inputSearch:hover,
+ .inputSearch:focus,
+ .inputSearch:active {
+   color: white;
+   background-color:  rgba(5, 5, 5, 0);
+   border-color: rgba(5, 5, 5, 0);
+ }
+
+ .inputSearch {
+  position: absolute;
+  left: 45%;
+   color: rgba(246, 248, 250, 0.9);
+   background-color:  rgba(5, 5, 5, 0);
+   border-color:rgba(5, 5, 5, 0);
+   font-weight: 700;
+   width: 40%;
+ }
+ .language {
+background-color: transparent;
+border: 0;
+margin: 5px;
+ }
+
+ .nopadding {
+   background: transparent;
+   border-color: transparent;
+   padding-top: 0;
+   padding-bottom: 0;
+ }
