@@ -1,0 +1,86 @@
+.img {
+   margin: 90px 0 10px;
+   position: relative;
+}
+
+.text {
+   position: absolute;
+   top: 80px;
+   color:white;
+   z-index: 1;
+   justify-content: flex;
+   padding: 5%;
+}
+
+.search {
+   justify-content: flex;
+   position: absolute;
+   font-weight: 700;
+}
+
+.search1 {
+   text-align: center;
+   font-weight: 500;
+   font-size: large;
+   border-radius: 25px;
+   height: 50px;
+}
+
+.searchButton {
+   position: relative;
+   left: -60px;
+   color: darkgray;
+   background-color: white;
+   border-color: white;
+   font-weight: 600;
+   border-radius: 25px;
+}
+
+.img2 {
+   position: relative;
+   margin-bottom: 3%;
+   justify-content: flex;
+
+}
+
+.text2 {
+   position: absolute;
+   bottom: 20px;
+   width: 100%;
+   color:white;
+   z-index: 1;
+   justify-content: center;
+   padding: 2% 3%;
+   text-align: center;
+   margin: auto;
+   font-weight: 700;
+  
+}
+
+@media screen and (min-width: 992px) {
+    h1 {
+      font-size: 24px;
+   }
+}
+
+h1 {
+   font-size: 52px;
+   font-weight: 700;
+}
+
+h3 {
+   font-size: 32px;
+   font-weight: 700;
+   margin-bottom: 30px;
+}
+
+h6 {
+   text-align: left;
+   margin-left: 8%;
+}
+
+.button {
+   font-weight: 600;
+   border: 2px solid white;
+   border-radius: 25px;
+}
