@@ -1,0 +1,10 @@
+.icon {
+   border-color: rgba(5, 5, 5, 0);
+ }
+
+ .iconSearch:hover,
+ .icon:hover {
+   border-color: rgba(5, 5, 5, 0);
+   background-color: rgba(5, 5, 5, 0);
+   color: rgba(246, 248, 250, 0.8);
+ }
