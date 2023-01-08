@@ -1,0 +1,44 @@
+.paper {
+   background-blend-mode: overlay;
+   background-repeat: no-repeat;
+   background-size: cover;
+   background-color: rgba(245, 245, 245, 0.3);
+   background-image: linear-gradient(90deg,rgba(255,255,255,0.01) 30%, rgb(245, 245, 245) 50%), url(https://emvwr2994ad.exactdn.com/wp-content/uploads/2018/11/stockholm-map-bg.png?strip=all&lossy=1&quality=77&ssl=1) !important;
+   padding: 2% 5% 3%;
+   height: 600px;
+}
+
+.box {
+width: 90%;
+margin-left: 10%;
+}
+
+@media screen and (min-width: 992px) {
+   .box {
+      width: 50%;
+      margin-left: 50%;
+      }
+}
+
+
+.button {
+   width: 70%;
+   padding: 8px 30px;
+   margin: 1% auto;
+   text-transform: uppercase;
+   font-weight: 600;
+   transition: 800ms;
+   text-transform: uppercase;
+   text-align: left;
+}
+
+.button:hover {
+   background-color: #5C8CB2;
+   border-color: #5C8CB2; 
+}
+
+.text {
+   text-transform: uppercase;
+   margin: 15px auto  25px;
+}
+
