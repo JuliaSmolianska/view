@@ -32,7 +32,14 @@
    color: white;
 }
 
-.link1:hover {
+.link_title {
+   border-bottom: 2px solid white;
+   font-weight: 700;
+   color: white;
+}
+
+.link1:hover,
+.link_title:hover {
    font-weight: 700;
    color: rgba(246, 248, 250, 0.8);
    background-color: rgba(5, 5, 5, 0);
