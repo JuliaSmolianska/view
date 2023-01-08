@@ -4,6 +4,7 @@ import NavMain from "./NavMain/NavMain";
 import store from "../../store";
 import RecommendPlaces from "./RecommendPlaces/RecommendPlaces";
 import Advertising from "./Advertising/Advertising";
+import ExploreAreas from "./ExploreAreas/ExploreAreas";
 
 function MainGeneral() {
    return (
@@ -13,6 +14,7 @@ function MainGeneral() {
          <NavMain categories={store} />
          <RecommendPlaces />
          <Advertising />
+         <ExploreAreas />
       </>
    )
 }
