@@ -16,7 +16,7 @@ function App() {
   return (
     <div className="App">
       <LanguageContext.Provider value={{language:language, setLanguage:setLanguage}}>
-      <NavHeader state={store} />
+      <NavHeader categories={store} />
       <MainGeneral />
       </LanguageContext.Provider>
     </div>

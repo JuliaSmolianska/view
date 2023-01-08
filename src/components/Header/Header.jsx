@@ -73,28 +73,28 @@ export default function NavHeader(props) {
                         <Nav className={`justify-content-end flex-grow-1 pe-3 ${styles.menuBody}`}>
                            <NavDropdown title={titles[languageContext.language][0]} id="collasible-nav-dropdown" className={styles.nopadding}>
                               <Container className={styles.link2}>
-                                 <NavDropdown.Item href={props.state.categories[0].link} className={styles.link1}>{titles[languageContext.language][0]}</NavDropdown.Item>
-                                 <NavDropdown.Item href={props.state.categories[1].link} className={styles.link1}>{titles[languageContext.language][1]}</NavDropdown.Item>
-                                 <NavDropdown.Item href={props.state.categories[2].link} className={styles.link1}>{titles[languageContext.language][2]}</NavDropdown.Item>
-                                 <NavDropdown.Item href={props.state.categories[3].link} className={styles.link1}>{titles[languageContext.language][3]}</NavDropdown.Item>
-                                 <NavDropdown.Item href={props.state.categories[4].link} className={styles.link1}>{titles[languageContext.language][4]}</NavDropdown.Item>
-                                 <NavDropdown.Item href={props.state.categories[5].link} className={styles.link1}>{titles[languageContext.language][5]}</NavDropdown.Item>
+                                 <NavDropdown.Item href={props.categories.categories[0].link} className={styles.link_title}>{titles[languageContext.language][0]}</NavDropdown.Item>
+                                 <NavDropdown.Item href={props.categories.categories[1].link} className={styles.link1}>{titles[languageContext.language][1]}</NavDropdown.Item>
+                                 <NavDropdown.Item href={props.categories.categories[2].link} className={styles.link1}>{titles[languageContext.language][2]}</NavDropdown.Item>
+                                 <NavDropdown.Item href={props.categories.categories[3].link} className={styles.link1}>{titles[languageContext.language][3]}</NavDropdown.Item>
+                                 <NavDropdown.Item href={props.categories.categories[4].link} className={styles.link1}>{titles[languageContext.language][4]}</NavDropdown.Item>
+                                 <NavDropdown.Item href={props.categories.categories[5].link} className={styles.link1}>{titles[languageContext.language][5]}</NavDropdown.Item>
                               </Container>
                            </NavDropdown>
 
                            <NavDropdown title={titles[languageContext.language][6]} id="collasible-nav-dropdown">
                               <Container className={styles.link2}>
-                                 <NavDropdown.Item href={props.state.categories[6].link} className={styles.link1}>{titles[languageContext.language][6]}</NavDropdown.Item>
-                                 <NavDropdown.Item href={props.state.categories[7].link} className={styles.link1}>{titles[languageContext.language][7]}</NavDropdown.Item>
-                                 <NavDropdown.Item href={props.state.categories[8].link} className={styles.link1}>{titles[languageContext.language][8]}</NavDropdown.Item>
-                                 <NavDropdown.Item href={props.state.categories[9].link} className={styles.link1}>{titles[languageContext.language][9]}</NavDropdown.Item>
-                                 <NavDropdown.Item href={props.state.categories[10].link} className={styles.link1}>{titles[languageContext.language][10]}</NavDropdown.Item>
+                                 <NavDropdown.Item href={props.categories.categories[6].link} className={styles.link_title}>{titles[languageContext.language][6]}</NavDropdown.Item>
+                                 <NavDropdown.Item href={props.categories.categories[7].link} className={styles.link1}>{titles[languageContext.language][7]}</NavDropdown.Item>
+                                 <NavDropdown.Item href={props.categories.categories[8].link} className={styles.link1}>{titles[languageContext.language][8]}</NavDropdown.Item>
+                                 <NavDropdown.Item href={props.categories.categories[9].link} className={styles.link1}>{titles[languageContext.language][9]}</NavDropdown.Item>
+                                 <NavDropdown.Item href={props.categories.categories[10].link} className={styles.link1}>{titles[languageContext.language][10]}</NavDropdown.Item>
                               </Container>
                            </NavDropdown>
 
-                           <Nav.Link href={props.state.categories[11].link} className={styles.link}>{titles[languageContext.language][11]}</Nav.Link>
-                           <Nav.Link href={props.state.categories[12].link} className={styles.link}>{titles[languageContext.language][12]}</Nav.Link>
-                           <Nav.Link href={props.state.categories[13].link} className={styles.link}>{titles[languageContext.language][13]}</Nav.Link>
+                           <Nav.Link href={props.categories.categories[11].link} className={styles.link}>{titles[languageContext.language][11]}</Nav.Link>
+                           <Nav.Link href={props.categories.categories[12].link} className={styles.link}>{titles[languageContext.language][12]}</Nav.Link>
+                           <Nav.Link href={props.categories.categories[13].link} className={styles.link}>{titles[languageContext.language][13]}</Nav.Link>
                            <button className={styles.language} onClick={() => handleLanguage("en")}>
                               <img
                                  src="https://emvwr2994ad.exactdn.com/wp-content/plugins/sitepress-multilingual-cms/res/flags/en.png?strip=all&lossy=1&quality=77&ssl=1"
