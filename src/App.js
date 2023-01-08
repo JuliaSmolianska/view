@@ -18,7 +18,7 @@ function App() {
       <LanguageContext.Provider value={{language:language, setLanguage:setLanguage}}>
       <NavHeader state={store} />
       <MainGeneral />
-    </LanguageContext.Provider>
+      </LanguageContext.Provider>
     </div>
   );
 }
