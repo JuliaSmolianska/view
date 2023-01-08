@@ -6,6 +6,7 @@ import RecommendPlaces from "./RecommendPlaces/RecommendPlaces";
 import Advertising from "./Advertising/Advertising";
 import ExploreAreas from "./ExploreAreas/ExploreAreas";
 import Instagrammed from "./Instagrammed/Instagrammed";
+import StockholmNumbers from "./StockholmNumbers/StockholmNumbers";
 
 function MainGeneral() {
    return (
@@ -17,6 +18,7 @@ function MainGeneral() {
          <Advertising />
          <ExploreAreas />
          <Instagrammed />
+         <StockholmNumbers />
       </>
    )
 }
