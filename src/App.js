@@ -4,6 +4,7 @@ import {LanguageContext} from "./languageContext";
 import { useState, useEffect } from 'react';
 import store from './store.js';
 import MainGeneral from './components/MainGeneral/MainGeneral';
+import Footer from './components/Footer/Footer';
 
 
 function App() {
@@ -18,6 +19,7 @@ function App() {
       <LanguageContext.Provider value={{language:language, setLanguage:setLanguage}}>
       <NavHeader categories={store} />
       <MainGeneral />
+      <Footer categories={store} />
       </LanguageContext.Provider>
     </div>
   );
