@@ -5,6 +5,7 @@ import store from "../../store";
 import RecommendPlaces from "./RecommendPlaces/RecommendPlaces";
 import Advertising from "./Advertising/Advertising";
 import ExploreAreas from "./ExploreAreas/ExploreAreas";
+import Instagrammed from "./Instagrammed/Instagrammed";
 
 function MainGeneral() {
    return (
@@ -15,6 +16,7 @@ function MainGeneral() {
          <RecommendPlaces />
          <Advertising />
          <ExploreAreas />
+         <Instagrammed />
       </>
    )
 }

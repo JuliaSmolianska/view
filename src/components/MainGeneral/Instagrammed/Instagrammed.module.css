@@ -1,0 +1,23 @@
+h5 {
+   font-family: 'Lato',Helvetica,Arial,Lucida,sans-serif;
+   font-weight: 700;
+   padding: 20px 10px 15px;
+   margin-top: 5%;
+}
+
+.box {
+   padding: 15px 10% 5%;
+}
+
+.button {
+   background-color: #5C8CB2;
+   border-color: #5C8CB2;
+   color: white;
+   padding: 8px 30px;
+   border-radius: 25px;
+   margin: 1% auto 3%;
+   text-transform: uppercase;
+   font-weight: 600;
+   transition: 800ms;
+}
+

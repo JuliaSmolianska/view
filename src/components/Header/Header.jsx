@@ -45,7 +45,6 @@ export default function NavHeader(props) {
       setButtonClick(buttonClick + 1);
    }
 
-
    if (init) {
       return (
          <>
