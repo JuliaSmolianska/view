@@ -11,6 +11,7 @@ import 'bootstrap-icons/font/bootstrap-icons.css';
 import styles from './Header.module.css';
 import SocialMedia from '../SocialMedia/SocialMedia';
 import { LanguageContext } from "../../languageContext";
+import { Link, NavLink } from 'react-router-dom';
 
 const titles = {
    en: ["SEE&DO", "MUSEUM &ATTRACTIONS", "ACTIVITIES", "OUTDOORS", "CULTURE&ENTERTAINMENT", "HEALTH&BEAUTY",
@@ -22,6 +23,7 @@ const titles = {
 export default function NavHeader(props) {
    const [buttonClick, setButtonClick] = useState(0);
    const [init, setInit] = useState(true);
+   const [value, setValue] = useState("");
    const expand = "lg";
    const languageContext = useContext(LanguageContext);
 
@@ -30,6 +32,7 @@ export default function NavHeader(props) {
          return;
       }
    }, [buttonClick])
+   
 
    function handleLanguage(language) {
       languageContext.setLanguage(language);
@@ -45,12 +48,16 @@ export default function NavHeader(props) {
       setButtonClick(buttonClick + 1);
    }
 
+   function goToSearch() {
+      window.location.href = `./${value}`;
+   }
+   
    if (init) {
       return (
          <>
             <Navbar key={expand} bg="dark" variant="dark" fixed="top" expand={expand} className="mb-3">
                <Container fluid className={styles.menu}>
-                  <Navbar.Brand href="https://viewstockholm.com/">
+                  <Navbar.Brand as={Link} to="/">
                      <img
                         src="https://emvwr2994ad.exactdn.com/wp-content/uploads/2022/04/view-stockholm-logo.png?strip=all&lossy=1&quality=77&ssl=1"
                         width="200"
@@ -66,13 +73,13 @@ export default function NavHeader(props) {
                      placement="end"
                      className={styles.linkMenu1}
                   >
-                     <Offcanvas.Header closeButton>
+                     <Offcanvas.Header closeButton className={styles.btn_close}>
                      </Offcanvas.Header>
                      <Offcanvas.Body>
                         <Nav className={`justify-content-end flex-grow-1 pe-3 ${styles.menuBody}`}>
-                           <NavDropdown title={titles[languageContext.language][0]} id="collasible-nav-dropdown" className={styles.nopadding}>
+                           <NavDropdown title={<span className={styles.dropdown}>{titles[languageContext.language][0]}</span>} id="collasible-nav-dropdown" className={styles.nopadding}>
                               <Container className={styles.link2}>
-                                 <NavDropdown.Item href={props.categories.categories[0].link} className={styles.link_title}>{titles[languageContext.language][0]}</NavDropdown.Item>
+                                 <NavDropdown.Item as={Link} to="/seedo" className={styles.link_title}>{titles[languageContext.language][0]}</NavDropdown.Item>
                                  <NavDropdown.Item href={props.categories.categories[1].link} className={styles.link1}>{titles[languageContext.language][1]}</NavDropdown.Item>
                                  <NavDropdown.Item href={props.categories.categories[2].link} className={styles.link1}>{titles[languageContext.language][2]}</NavDropdown.Item>
                                  <NavDropdown.Item href={props.categories.categories[3].link} className={styles.link1}>{titles[languageContext.language][3]}</NavDropdown.Item>
@@ -81,9 +88,9 @@ export default function NavHeader(props) {
                               </Container>
                            </NavDropdown>
 
-                           <NavDropdown title={titles[languageContext.language][6]} id="collasible-nav-dropdown">
+                           <NavDropdown title={<span className={styles.dropdown}>{titles[languageContext.language][6]}</span>} id="collasible-nav-dropdown">
                               <Container className={styles.link2}>
-                                 <NavDropdown.Item href={props.categories.categories[6].link} className={styles.link_title}>{titles[languageContext.language][6]}</NavDropdown.Item>
+                                 <NavDropdown.Item as={Link} to="/food" className={styles.link_title}>{titles[languageContext.language][6]}</NavDropdown.Item>
                                  <NavDropdown.Item href={props.categories.categories[7].link} className={styles.link1}>{titles[languageContext.language][7]}</NavDropdown.Item>
                                  <NavDropdown.Item href={props.categories.categories[8].link} className={styles.link1}>{titles[languageContext.language][8]}</NavDropdown.Item>
                                  <NavDropdown.Item href={props.categories.categories[9].link} className={styles.link1}>{titles[languageContext.language][9]}</NavDropdown.Item>
@@ -91,9 +98,9 @@ export default function NavHeader(props) {
                               </Container>
                            </NavDropdown>
 
-                           <Nav.Link href={props.categories.categories[11].link} className={styles.link}>{titles[languageContext.language][11]}</Nav.Link>
-                           <Nav.Link href={props.categories.categories[12].link} className={styles.link}>{titles[languageContext.language][12]}</Nav.Link>
-                           <Nav.Link href={props.categories.categories[13].link} className={styles.link}>{titles[languageContext.language][13]}</Nav.Link>
+                           <Nav.Link as={Link} to="/stay" className={styles.link}>{titles[languageContext.language][11]}</Nav.Link>
+                           <Nav.Link as={Link} to="/shop" className={styles.link}>{titles[languageContext.language][12]}</Nav.Link>
+                           <Nav.Link as={Link} to="/work"  className={styles.link}>{titles[languageContext.language][13]}</Nav.Link>
                            <button className={styles.language} onClick={() => handleLanguage("en")}>
                               <img
                                  src="https://emvwr2994ad.exactdn.com/wp-content/plugins/sitepress-multilingual-cms/res/flags/en.png?strip=all&lossy=1&quality=77&ssl=1"
@@ -141,8 +148,10 @@ export default function NavHeader(props) {
                         placeholder={titles[languageContext.language][14]}
                         className={`me-2 ${styles.inputSearch}`}
                         aria-label="Search"
+                        onChange={(e) => setValue(e.target.value) }
                      />
                      <Button onClick={finishSearch} className={styles.closeSearchBut}>X</Button>
+                     <Button  variant="outline-light" onClick={goToSearch} className={styles.iconSearch}><i className="bi bi-search"></i></Button>
                   </Form>
                   <Container className={styles.iconSocial}>
                      <SocialMedia />

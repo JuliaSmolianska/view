@@ -28,10 +28,10 @@
    }
    
    .text {
-      height: 80px;
+      height: 90px;
       vertical-align: middle;
       font-weight: 700;
-      font-size: larger;
+      font-size: large;
    }
    
    .button {

@@ -1,0 +1,13 @@
+p {
+font-size: larger;
+}
+.title {
+  text-transform: uppercase;
+  font-weight: 700;
+  margin-top: 10px;
+}
+
+.margin {
+  margin: 20px auto 40px;
+}
+
