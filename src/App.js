@@ -20,7 +20,7 @@ function App() {
   }, [language]);
 
   return (
-    <BrowserRouter basename="/">
+    <BrowserRouter basename={process.env.PUBLIC_URL}>
       <div className="App">
         <LanguageContext.Provider
           value={{ language: language, setLanguage: setLanguage }}
