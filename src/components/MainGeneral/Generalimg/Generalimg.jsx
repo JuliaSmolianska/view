@@ -68,7 +68,7 @@ export default function Generalimg() {
         <Row>
           <Col xs="11" lg={{ span: 6, offset: 1 }} className={styles.img2}>
             <img
-              src="images/general_Img1.webp"
+              src="images/general_img1.webp"
               class="d-block w-100"
               height="300"
               alt="wp-content"
